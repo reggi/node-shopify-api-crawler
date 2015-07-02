@@ -1,0 +1,964 @@
+[
+  {
+    "href": "/api/applicationcharge/",
+    "text": "ApplicationCharge",
+    "list": [
+      {
+        "request": "POST /admin/application_charges.json",
+        "description": "Create a new one-time application charge"
+      },
+      {
+        "request": "GET /admin/application_charges/#{id}.json",
+        "description": "Receive a single ApplicationCharge"
+      },
+      {
+        "request": "GET /admin/application_charges.json",
+        "description": "Retrieve all one-time application charges"
+      },
+      {
+        "request": "POST /admin/application_charges/#{id}/activate.json",
+        "description": "Activate a one-time application charge"
+      }
+    ]
+  },
+  {
+    "href": "/api/article/",
+    "text": "Article",
+    "list": [
+      {
+        "request": "GET /admin/blogs/#{id}/articles.json",
+        "description": "Receive a list of all Articles"
+      },
+      {
+        "request": "GET /admin/blogs/#{id}/articles/count.json",
+        "description": "Receive a count of all Articles"
+      },
+      {
+        "request": "GET /admin/blogs/#{id}/articles/#{id}.json",
+        "description": "Receive a single Article"
+      },
+      {
+        "request": "POST /admin/blogs/#{id}/articles.json",
+        "description": "Create a new Article"
+      },
+      {
+        "request": "PUT /admin/blogs/#{id}/articles/#{id}.json",
+        "description": "Modify an existing Article"
+      },
+      {
+        "request": "GET /admin/articles/authors.json",
+        "description": "Get a list of all the authors"
+      },
+      {
+        "request": "GET /admin/articles/tags.json",
+        "description": "Get a list of all the tags"
+      },
+      {
+        "request": "DELETE /admin/blogs/#{id}/articles/#{id}.json",
+        "description": "Remove a Article from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/asset/",
+    "text": "Asset",
+    "list": [
+      {
+        "request": "GET /admin/themes/#{id}/assets.json",
+        "description": "Receive a list of all Assets"
+      },
+      {
+        "request": "GET /admin/themes/#{id}/assets.json?asset[key]=templates/index.liquid&theme_id=828155753",
+        "description": "Receive a single Asset"
+      },
+      {
+        "request": "PUT /admin/themes/#{id}/assets.json",
+        "description": "Creating or Modifying an Asset"
+      },
+      {
+        "request": "DELETE /admin/themes/#{id}/assets.json?asset[key]=assets/bg-body.gif",
+        "description": "Remove a Asset from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/blog/",
+    "text": "Blog",
+    "list": [
+      {
+        "request": "GET /admin/blogs.json",
+        "description": "Receive a list of all Blogs"
+      },
+      {
+        "request": "GET /admin/blogs/count.json",
+        "description": "Receive a count of all Blogs"
+      },
+      {
+        "request": "GET /admin/blogs/#{id}.json",
+        "description": "Receive a single Blog"
+      },
+      {
+        "request": "POST /admin/blogs.json",
+        "description": "Create a new Blog"
+      },
+      {
+        "request": "PUT /admin/blogs/#{id}.json",
+        "description": "Modify an existing Blog"
+      },
+      {
+        "request": "DELETE /admin/blogs/#{id}.json",
+        "description": "Remove a Blog from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/carrierservice/",
+    "text": "CarrierService",
+    "list": [
+      {
+        "request": "POST /admin/carrier_services.json",
+        "description": "Create a new CarrierService"
+      },
+      {
+        "request": "PUT /admin/carrier_services/#{id}.json",
+        "description": "Modify an existing CarrierService"
+      },
+      {
+        "request": "GET /admin/carrier_services.json",
+        "description": "Receive a list of all CarrierServices"
+      },
+      {
+        "request": "GET /admin/carrier_services/#{id}.json",
+        "description": "Receive a single CarrierService"
+      },
+      {
+        "request": "DELETE /admin/carrier_services/#{id}.json",
+        "description": "Remove a CarrierService from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/checkout/",
+    "text": "Checkout",
+    "list": [
+      {
+        "request": "GET /admin/checkouts/count.json",
+        "description": "Receive a count of all Checkouts"
+      },
+      {
+        "request": "GET /admin/checkouts.json",
+        "description": "Receive a list of all Checkouts"
+      }
+    ]
+  },
+  {
+    "href": "/api/collect/",
+    "text": "Collect",
+    "list": [
+      {
+        "request": "POST /admin/collects.json",
+        "description": "Create a new Collect"
+      },
+      {
+        "request": "DELETE /admin/collects/#{id}.json",
+        "description": "Remove a Collect from the database"
+      },
+      {
+        "request": "GET /admin/collects.json",
+        "description": "Receive a list of all Collects"
+      },
+      {
+        "request": "GET /admin/collects/count.json",
+        "description": "Receive a count of all Collects"
+      },
+      {
+        "request": "GET /admin/collects/#{id}.json",
+        "description": "Receive a single Collect"
+      }
+    ]
+  },
+  {
+    "href": "/api/comment/",
+    "text": "Comment",
+    "list": [
+      {
+        "request": "GET /admin/comments.json?article_id=134645308&blog_id=241253187",
+        "description": "Receive a list of all Comments"
+      },
+      {
+        "request": "GET /admin/comments/count.json?article_id=134645308&blog_id=241253187",
+        "description": "Receive a count of all Comments"
+      },
+      {
+        "request": "GET /admin/comments/#{id}.json",
+        "description": "Receive a single Comment"
+      },
+      {
+        "request": "POST /admin/comments.json",
+        "description": "Create a new Comment"
+      },
+      {
+        "request": "PUT /admin/comments/#{id}.json",
+        "description": "Modify an existing Comment"
+      },
+      {
+        "request": "POST /admin/comments/#{id}/spam.json",
+        "description": "Mark a Comment as spam"
+      },
+      {
+        "request": "POST /admin/comments/#{id}/not_spam.json",
+        "description": "Mark a Comment as not spam"
+      },
+      {
+        "request": "POST /admin/comments/#{id}/approve.json",
+        "description": "Approve a Comment"
+      },
+      {
+        "request": "POST /admin/comments/#{id}/remove.json",
+        "description": "Remove a Comment"
+      },
+      {
+        "request": "POST /admin/comments/#{id}/restore.json",
+        "description": "Restore a Comment"
+      }
+    ]
+  },
+  {
+    "href": "/api/country/",
+    "text": "Country",
+    "list": [
+      {
+        "request": "GET /admin/countries.json",
+        "description": "Receive a list of all Countries"
+      },
+      {
+        "request": "GET /admin/countries/count.json",
+        "description": "Receive a count of all Countries"
+      },
+      {
+        "request": "GET /admin/countries/#{id}.json",
+        "description": "Receive a single Country"
+      },
+      {
+        "request": "POST /admin/countries.json",
+        "description": "Create a new Country"
+      },
+      {
+        "request": "PUT /admin/countries/#{id}.json",
+        "description": "Modify an existing Country"
+      },
+      {
+        "request": "DELETE /admin/countries/#{id}.json",
+        "description": "Remove a Country from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/customcollection/",
+    "text": "CustomCollection",
+    "list": [
+      {
+        "request": "GET /admin/custom_collections.json",
+        "description": "Receive a list of all CustomCollections"
+      },
+      {
+        "request": "GET /admin/custom_collections/count.json",
+        "description": "Receive a count of all CustomCollections"
+      },
+      {
+        "request": "GET /admin/custom_collections/#{id}.json",
+        "description": "Receive a single CustomCollection"
+      },
+      {
+        "request": "POST /admin/custom_collections.json",
+        "description": "Create a new CustomCollection"
+      },
+      {
+        "request": "PUT /admin/custom_collections/#{id}.json",
+        "description": "Modify an existing CustomCollection"
+      },
+      {
+        "request": "DELETE /admin/custom_collections/#{id}.json",
+        "description": "Remove a CustomCollection from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/customer/",
+    "text": "Customer",
+    "list": [
+      {
+        "request": "GET /admin/customers.json",
+        "description": "Receive a list of all Customers"
+      },
+      {
+        "request": "GET /admin/customers/search.json?query=Bob country:United States",
+        "description": "Search for customers matching supplied query"
+      },
+      {
+        "request": "GET /admin/customers/#{id}.json",
+        "description": "Receive a single Customer"
+      },
+      {
+        "request": "POST /admin/customers.json",
+        "description": "Create a new Customer"
+      },
+      {
+        "request": "PUT /admin/customers/#{id}.json",
+        "description": "Modify an existing Customer"
+      },
+      {
+        "request": "DELETE /admin/customers/#{id}.json",
+        "description": "Remove a Customer from the database"
+      },
+      {
+        "request": "GET /admin/customers/count.json",
+        "description": "Receive a count of all Customers"
+      },
+      {
+        "request": "GET /admin/orders.json?customer_id=207119551",
+        "description": "Find orders belonging to this customer"
+      }
+    ]
+  },
+  {
+    "href": "/api/customeraddress/",
+    "text": "CustomerAddress",
+    "list": [
+      {
+        "request": "GET /admin/customers/#{id}/addresses.json",
+        "description": "Receive a list of all CustomerAddresses"
+      },
+      {
+        "request": "GET /admin/customers/#{id}/addresses/#{id}.json",
+        "description": "Receive a single CustomerAddress"
+      },
+      {
+        "request": "POST /admin/customers/#{id}/addresses.json",
+        "description": "Create a new CustomerAddress"
+      },
+      {
+        "request": "PUT /admin/customers/#{id}/addresses/#{id}.json",
+        "description": "Modify an existing CustomerAddress"
+      },
+      {
+        "request": "DELETE /admin/customers/#{id}/addresses/#{id}.json",
+        "description": "Remove a CustomerAddress from the database"
+      },
+      {
+        "request": "PUT /admin/customers/#{id}/addresses/set.json?address_ids[]=1053317289&operation=destroy",
+        "description": "Perform bulk operations against a number of addresses"
+      },
+      {
+        "request": "PUT /admin/customers/#{id}/addresses/#{id}/default.json",
+        "description": "Sets default address for a customer"
+      }
+    ]
+  },
+  {
+    "href": "/api/customersavedsearch/",
+    "text": "CustomerSavedSearch",
+    "list": [
+      {
+        "request": "GET /admin/customer_saved_searches.json",
+        "description": "Receive a list of all CustomerSavedSearches"
+      },
+      {
+        "request": "GET /admin/customer_saved_searches/count.json",
+        "description": "Receive a count of all CustomerSavedSearches"
+      },
+      {
+        "request": "GET /admin/customer_saved_searches/#{id}.json",
+        "description": "Receive a single CustomerSavedSearch"
+      },
+      {
+        "request": "GET /admin/customer_saved_searches/#{id}/customers.json",
+        "description": "Receive all Customers resulting from a Customer Saved Search"
+      },
+      {
+        "request": "POST /admin/customer_saved_searches.json",
+        "description": "Create a new CustomerSavedSearch"
+      },
+      {
+        "request": "PUT /admin/customer_saved_searches/#{id}.json",
+        "description": "Modify an existing CustomerSavedSearch"
+      },
+      {
+        "request": "DELETE /admin/customer_saved_searches/#{id}.json",
+        "description": "Remove a CustomerSavedSearch from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/event/",
+    "text": "Event",
+    "list": [
+      {
+        "request": "GET /admin/events.json",
+        "description": "Receive a list of all Events"
+      },
+      {
+        "request": "GET /admin/events/#{id}.json",
+        "description": "Receive a single Event"
+      },
+      {
+        "request": "GET /admin/events/count.json",
+        "description": "Receive a count of all Events"
+      }
+    ]
+  },
+  {
+    "href": "/api/fulfillment/",
+    "text": "Fulfillment",
+    "list": [
+      {
+        "request": "GET /admin/orders/#{id}/fulfillments.json",
+        "description": "Receive a list of all Fulfillments"
+      },
+      {
+        "request": "GET /admin/orders/#{id}/fulfillments/count.json",
+        "description": "Receive a count of all Fulfillments"
+      },
+      {
+        "request": "GET /admin/orders/#{id}/fulfillments/#{id}.json",
+        "description": "Receive a single Fulfillment"
+      },
+      {
+        "request": "POST /admin/orders/#{id}/fulfillments.json",
+        "description": "Create a new Fulfillment"
+      },
+      {
+        "request": "PUT /admin/orders/#{id}/fulfillments/#{id}.json",
+        "description": "Modify an existing Fulfillment"
+      },
+      {
+        "request": "POST /admin/orders/#{id}/fulfillments/#{id}/complete.json",
+        "description": "Complete a pending fulfillment"
+      },
+      {
+        "request": "POST /admin/orders/#{id}/fulfillments/#{id}/cancel.json",
+        "description": "Cancel a pending fulfillment"
+      }
+    ]
+  },
+  {
+    "href": "/api/fulfillmentservice/",
+    "text": "FulfillmentService",
+    "list": [
+      {
+        "request": "GET /admin/fulfillment_services.json",
+        "description": "Receive a list of all FulfillmentServices"
+      },
+      {
+        "request": "POST /admin/fulfillment_services.json",
+        "description": "Create a new FulfillmentService"
+      },
+      {
+        "request": "GET /admin/fulfillment_services/#{id}.json",
+        "description": "Receive a single FulfillmentService"
+      },
+      {
+        "request": "PUT /admin/fulfillment_services/#{id}.json",
+        "description": "Modify an existing FulfillmentService"
+      },
+      {
+        "request": "DELETE /admin/fulfillment_services/#{id}.json",
+        "description": "Remove a FulfillmentService from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/location/",
+    "text": "Location",
+    "list": [
+      {
+        "request": "GET /admin/locations.json",
+        "description": "Receive a list of all Locations"
+      },
+      {
+        "request": "GET /admin/locations/#{id}.json",
+        "description": "Receive a single Location"
+      }
+    ]
+  },
+  {
+    "href": "/api/metafield/",
+    "text": "Metafield",
+    "list": [
+      {
+        "request": "GET /admin/metafields.json",
+        "description": "Get metafields that belong to a store"
+      },
+      {
+        "request": "GET /admin/products/#{id}/metafields.json",
+        "description": "Get metafields that belong to a product"
+      },
+      {
+        "request": "GET /admin/metafields.json?metafield[owner_id]=850703190&metafield[owner_resource]=product_image",
+        "description": "Get metafields that belong to a product image"
+      },
+      {
+        "request": "GET /admin/metafields/count.json",
+        "description": "Get a count of metafields that belong to a store"
+      },
+      {
+        "request": "GET /admin/products/#{id}/metafields/count.json",
+        "description": "Get a count of metafields that belong to a product"
+      },
+      {
+        "request": "GET /admin/metafields/#{id}.json",
+        "description": "Get a single store metafield by its ID"
+      },
+      {
+        "request": "GET /admin/products/#{id}/metafields/#{id}.json",
+        "description": "Get a single product metafield by its ID"
+      },
+      {
+        "request": "POST /admin/metafields.json",
+        "description": "Create a new metafield for a store"
+      },
+      {
+        "request": "POST /admin/products/#{id}/metafields.json",
+        "description": "Create a new metafield for a product"
+      },
+      {
+        "request": "PUT /admin/metafields/#{id}.json",
+        "description": "Update a store metafield"
+      },
+      {
+        "request": "PUT /admin/products/#{id}/metafields/#{id}.json",
+        "description": "Update a product metafield"
+      },
+      {
+        "request": "DELETE /admin/metafields/#{id}.json",
+        "description": "Delete a store metafield"
+      },
+      {
+        "request": "DELETE /admin/products/#{id}/metafields/#{id}.json",
+        "description": "Delete a product metafield"
+      }
+    ]
+  },
+  {
+    "href": "/api/order/",
+    "text": "Order",
+    "list": [
+      {
+        "request": "GET /admin/orders.json",
+        "description": "Retrieve a list of Orders (OPEN Orders by default, use status=any for ALL orders)"
+      },
+      {
+        "request": "GET /admin/orders/#{id}.json",
+        "description": "Receive a single Order"
+      },
+      {
+        "request": "GET /admin/orders/count.json",
+        "description": "Receive a count of all Orders"
+      },
+      {
+        "request": "POST /admin/orders/#{id}/close.json",
+        "description": "Close an Order"
+      },
+      {
+        "request": "POST /admin/orders/#{id}/open.json",
+        "description": "Re-open a closed Order"
+      },
+      {
+        "request": "POST /admin/orders/#{id}/cancel.json",
+        "description": "Cancel an Order"
+      },
+      {
+        "request": "POST /admin/orders.json",
+        "description": "Create a new Order"
+      },
+      {
+        "request": "PUT /admin/orders/#{id}.json",
+        "description": "Modify an existing Order"
+      },
+      {
+        "request": "DELETE /admin/orders/#{id}.json",
+        "description": "Remove a Order from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/order_risks/",
+    "text": "Order Risks",
+    "list": [
+      {
+        "request": "POST /admin/orders/#{id}/risks.json",
+        "description": "Create a new Order Risks"
+      },
+      {
+        "request": "GET /admin/orders/#{id}/risks.json",
+        "description": "Receive a list of all Order Risks"
+      },
+      {
+        "request": "GET /admin/orders/#{id}/risks/#{id}.json",
+        "description": "Receive a single Order Risks"
+      },
+      {
+        "request": "PUT /admin/orders/#{id}/risks/#{id}.json",
+        "description": "Modify an existing Order Risks"
+      },
+      {
+        "request": "DELETE /admin/orders/#{id}/risks/#{id}.json",
+        "description": "Remove a Order Risks from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/page/",
+    "text": "Page",
+    "list": [
+      {
+        "request": "GET /admin/pages.json",
+        "description": "Receive a list of all Pages"
+      },
+      {
+        "request": "GET /admin/pages/count.json",
+        "description": "Receive a count of all Pages"
+      },
+      {
+        "request": "GET /admin/pages/#{id}.json",
+        "description": "Receive a single Page"
+      },
+      {
+        "request": "POST /admin/pages.json",
+        "description": "Create a new Page"
+      },
+      {
+        "request": "PUT /admin/pages/#{id}.json",
+        "description": "Modify an existing Page"
+      },
+      {
+        "request": "DELETE /admin/pages/#{id}.json",
+        "description": "Remove a Page from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/policy/",
+    "text": "Policy",
+    "list": [
+      {
+        "request": "GET /admin/policies.json",
+        "description": "Receive a list of all Policies"
+      }
+    ]
+  },
+  {
+    "href": "/api/product/",
+    "text": "Product",
+    "list": [
+      {
+        "request": "GET /admin/products.json",
+        "description": "Receive a list of all Products"
+      },
+      {
+        "request": "GET /admin/products/count.json",
+        "description": "Receive a count of all Products"
+      },
+      {
+        "request": "GET /admin/products/#{id}.json",
+        "description": "Receive a single Product"
+      },
+      {
+        "request": "POST /admin/products.json",
+        "description": "Create a new Product"
+      },
+      {
+        "request": "PUT /admin/products/#{id}.json",
+        "description": "Modify an existing Product"
+      },
+      {
+        "request": "DELETE /admin/products/#{id}.json",
+        "description": "Remove a Product from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/product_image/",
+    "text": "Product Image",
+    "list": [
+      {
+        "request": "GET /admin/products/#{id}/images.json",
+        "description": "Receive a list of all Product Images"
+      },
+      {
+        "request": "GET /admin/products/#{id}/images/count.json",
+        "description": "Receive a count of all Product Images"
+      },
+      {
+        "request": "GET /admin/products/#{id}/images/#{id}.json",
+        "description": "Receive a single Product Image"
+      },
+      {
+        "request": "POST /admin/products/#{id}/images.json",
+        "description": "Create a new Product Image"
+      },
+      {
+        "request": "PUT /admin/products/#{id}/images/#{id}.json",
+        "description": "Modify an existing Product Image"
+      },
+      {
+        "request": "DELETE /admin/products/#{id}/images/#{id}.json",
+        "description": "Remove a Product Image from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/product_variant/",
+    "text": "Product Variant",
+    "list": [
+      {
+        "request": "GET /admin/products/#{id}/variants.json",
+        "description": "Receive a list of all Product Variants"
+      },
+      {
+        "request": "GET /admin/products/#{id}/variants/count.json",
+        "description": "Receive a count of all Product Variants"
+      },
+      {
+        "request": "GET /admin/variants/#{id}.json",
+        "description": "Receive a single Product Variant"
+      },
+      {
+        "request": "POST /admin/products/#{id}/variants.json",
+        "description": "Create a new Product Variant"
+      },
+      {
+        "request": "PUT /admin/variants/#{id}.json",
+        "description": "Modify an existing Product Variant"
+      },
+      {
+        "request": "DELETE /admin/products/#{id}/variants/#{id}.json",
+        "description": "Remove a Product Variant from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/province/",
+    "text": "Province",
+    "list": [
+      {
+        "request": "GET /admin/countries/#{id}/provinces.json",
+        "description": "Receive a list of all Provinces"
+      },
+      {
+        "request": "GET /admin/countries/#{id}/provinces/count.json",
+        "description": "Receive a count of all Provinces"
+      },
+      {
+        "request": "GET /admin/countries/#{id}/provinces/#{id}.json",
+        "description": "Receive a single Province"
+      },
+      {
+        "request": "PUT /admin/countries/#{id}/provinces/#{id}.json",
+        "description": "Modify an existing Province"
+      }
+    ]
+  },
+  {
+    "href": "/api/recurringapplicationcharge/",
+    "text": "RecurringApplicationCharge",
+    "list": [
+      {
+        "request": "POST /admin/recurring_application_charges.json",
+        "description": "Create a recurring application charge"
+      },
+      {
+        "request": "GET /admin/recurring_application_charges/#{id}.json",
+        "description": "Receive a single RecurringApplicationCharge"
+      },
+      {
+        "request": "GET /admin/recurring_application_charges.json",
+        "description": "Retrieve all recurring application charges"
+      },
+      {
+        "request": "POST /admin/recurring_application_charges/#{id}/activate.json",
+        "description": "Activate a recurring application charge"
+      },
+      {
+        "request": "DELETE /admin/recurring_application_charges/#{id}.json",
+        "description": "Cancel a recurring application charge"
+      }
+    ]
+  },
+  {
+    "href": "/api/redirect/",
+    "text": "Redirect",
+    "list": [
+      {
+        "request": "GET /admin/redirects.json",
+        "description": "Receive a list of all Redirects"
+      },
+      {
+        "request": "GET /admin/redirects/count.json",
+        "description": "Receive a count of all Redirects"
+      },
+      {
+        "request": "GET /admin/redirects/#{id}.json",
+        "description": "Receive a single Redirect"
+      },
+      {
+        "request": "POST /admin/redirects.json",
+        "description": "Create a new Redirect"
+      },
+      {
+        "request": "PUT /admin/redirects/#{id}.json",
+        "description": "Modify an existing Redirect"
+      },
+      {
+        "request": "DELETE /admin/redirects/#{id}.json",
+        "description": "Remove a Redirect from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/refund/",
+    "text": "Refund",
+    "list": [
+      {
+        "request": "GET /admin/orders/#{id}/refunds/#{id}.json",
+        "description": "Receive a single Refund"
+      }
+    ]
+  },
+  {
+    "href": "/api/shop/",
+    "text": "Shop",
+    "list": [
+      {
+        "request": "GET /admin/shop.json",
+        "description": "Receive a single Shop"
+      }
+    ]
+  },
+  {
+    "href": "/api/smartcollection/",
+    "text": "SmartCollection",
+    "list": [
+      {
+        "request": "GET /admin/smart_collections.json",
+        "description": "Receive a list of all SmartCollections"
+      },
+      {
+        "request": "GET /admin/smart_collections/count.json",
+        "description": "Receive a count of all SmartCollections"
+      },
+      {
+        "request": "GET /admin/smart_collections/#{id}.json",
+        "description": "Receive a single SmartCollection"
+      },
+      {
+        "request": "POST /admin/smart_collections.json",
+        "description": "Create a new SmartCollection"
+      },
+      {
+        "request": "PUT /admin/smart_collections/#{id}.json",
+        "description": "Modify an existing SmartCollection"
+      },
+      {
+        "request": "PUT /admin/smart_collections/#{id}/order.json?products[]=921728736&products[]=632910392",
+        "description": "Set the ordering type and/or the manual order of products in a smart collection"
+      },
+      {
+        "request": "DELETE /admin/smart_collections/#{id}.json",
+        "description": "Remove a SmartCollection from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/theme/",
+    "text": "Theme",
+    "list": [
+      {
+        "request": "GET /admin/themes.json",
+        "description": "Receive a list of all Themes"
+      },
+      {
+        "request": "GET /admin/themes/#{id}.json",
+        "description": "Receive a single Theme"
+      },
+      {
+        "request": "POST /admin/themes.json",
+        "description": "Create a new Theme"
+      },
+      {
+        "request": "PUT /admin/themes/#{id}.json",
+        "description": "Modify an existing Theme"
+      },
+      {
+        "request": "DELETE /admin/themes/#{id}.json",
+        "description": "Remove a Theme from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/transaction/",
+    "text": "Transaction",
+    "list": [
+      {
+        "request": "GET /admin/orders/#{id}/transactions.json",
+        "description": "Receive a list of all Transactions"
+      },
+      {
+        "request": "GET /admin/orders/#{id}/transactions/count.json",
+        "description": "Receive a count of all Transactions"
+      },
+      {
+        "request": "GET /admin/orders/#{id}/transactions/#{id}.json",
+        "description": "Receive a single Transaction"
+      },
+      {
+        "request": "POST /admin/orders/#{id}/transactions.json",
+        "description": "Create a new Transaction"
+      }
+    ]
+  },
+  {
+    "href": "/api/user/",
+    "text": "Userplus",
+    "list": [
+      {
+        "request": "GET /admin/users.json",
+        "description": "Receive a list of all Users"
+      },
+      {
+        "request": "GET /admin/users/#{id}.json",
+        "description": "Receive a single User"
+      }
+    ]
+  },
+  {
+    "href": "/api/webhook/",
+    "text": "Webhook",
+    "list": [
+      {
+        "request": "GET /admin/webhooks.json",
+        "description": "Receive a list of all Webhooks"
+      },
+      {
+        "request": "GET /admin/webhooks/count.json",
+        "description": "Receive a count of all Webhooks"
+      },
+      {
+        "request": "GET /admin/webhooks/#{id}.json",
+        "description": "Receive a single Webhook"
+      },
+      {
+        "request": "POST /admin/webhooks.json",
+        "description": "Create a new Webhook"
+      },
+      {
+        "request": "PUT /admin/webhooks/#{id}.json",
+        "description": "Modify an existing Webhook"
+      },
+      {
+        "request": "DELETE /admin/webhooks/#{id}.json",
+        "description": "Remove a Webhook from the database"
+      }
+    ]
+  }
+]
