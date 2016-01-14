@@ -5,18 +5,26 @@
     "list": [
       {
         "request": "POST /admin/application_charges.json",
+        "method": "POST",
+        "endpoint": "/admin/application_charges.json",
         "description": "Create a new one-time application charge"
       },
       {
         "request": "GET /admin/application_charges/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/application_charges/#{id}.json",
         "description": "Receive a single ApplicationCharge"
       },
       {
         "request": "GET /admin/application_charges.json?since_id=556467234",
+        "method": "GET",
+        "endpoint": "/admin/application_charges.json",
         "description": "Retrieve all one-time application charges"
       },
       {
         "request": "POST /admin/application_charges/#{id}/activate.json",
+        "method": "POST",
+        "endpoint": "/admin/application_charges/#{id}/activate.json",
         "description": "Activate a one-time application charge"
       }
     ]
@@ -27,34 +35,50 @@
     "list": [
       {
         "request": "GET /admin/blogs/#{id}/articles.json",
+        "method": "GET",
+        "endpoint": "/admin/blogs/#{id}/articles.json",
         "description": "Receive a list of all Articles"
       },
       {
         "request": "GET /admin/blogs/#{id}/articles/count.json",
+        "method": "GET",
+        "endpoint": "/admin/blogs/#{id}/articles/count.json",
         "description": "Receive a count of all Articles"
       },
       {
         "request": "GET /admin/blogs/#{id}/articles/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/blogs/#{id}/articles/#{id}.json",
         "description": "Receive a single Article"
       },
       {
         "request": "POST /admin/blogs/#{id}/articles.json",
+        "method": "POST",
+        "endpoint": "/admin/blogs/#{id}/articles.json",
         "description": "Create a new Article"
       },
       {
         "request": "PUT /admin/blogs/#{id}/articles/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/blogs/#{id}/articles/#{id}.json",
         "description": "Modify an existing Article"
       },
       {
         "request": "GET /admin/articles/authors.json",
+        "method": "GET",
+        "endpoint": "/admin/articles/authors.json",
         "description": "Get a list of all the authors"
       },
       {
         "request": "GET /admin/blogs/#{id}/articles/tags.json",
+        "method": "GET",
+        "endpoint": "/admin/blogs/#{id}/articles/tags.json",
         "description": "Get a list of all the tags"
       },
       {
         "request": "DELETE /admin/blogs/#{id}/articles/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/blogs/#{id}/articles/#{id}.json",
         "description": "Remove a Article from the database"
       }
     ]
@@ -65,18 +89,26 @@
     "list": [
       {
         "request": "GET /admin/themes/#{id}/assets.json",
+        "method": "GET",
+        "endpoint": "/admin/themes/#{id}/assets.json",
         "description": "Receive a list of all Assets"
       },
       {
         "request": "GET /admin/themes/#{id}/assets.json?asset[key]=templates/index.liquid&theme_id=828155753",
+        "method": "GET",
+        "endpoint": "/admin/themes/#{id}/assets.json",
         "description": "Receive a single Asset"
       },
       {
         "request": "PUT /admin/themes/#{id}/assets.json",
+        "method": "PUT",
+        "endpoint": "/admin/themes/#{id}/assets.json",
         "description": "Creating or Modifying an Asset"
       },
       {
         "request": "DELETE /admin/themes/#{id}/assets.json?asset[key]=assets/bg-body.gif",
+        "method": "DELETE",
+        "endpoint": "/admin/themes/#{id}/assets.json",
         "description": "Remove a Asset from the database"
       }
     ]
@@ -87,26 +119,38 @@
     "list": [
       {
         "request": "GET /admin/blogs.json",
+        "method": "GET",
+        "endpoint": "/admin/blogs.json",
         "description": "Receive a list of all Blogs"
       },
       {
         "request": "GET /admin/blogs/count.json",
+        "method": "GET",
+        "endpoint": "/admin/blogs/count.json",
         "description": "Receive a count of all Blogs"
       },
       {
         "request": "GET /admin/blogs/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/blogs/#{id}.json",
         "description": "Receive a single Blog"
       },
       {
         "request": "POST /admin/blogs.json",
+        "method": "POST",
+        "endpoint": "/admin/blogs.json",
         "description": "Create a new Blog"
       },
       {
         "request": "PUT /admin/blogs/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/blogs/#{id}.json",
         "description": "Modify an existing Blog"
       },
       {
         "request": "DELETE /admin/blogs/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/blogs/#{id}.json",
         "description": "Remove a Blog from the database"
       }
     ]
@@ -117,22 +161,32 @@
     "list": [
       {
         "request": "POST /admin/carrier_services.json",
+        "method": "POST",
+        "endpoint": "/admin/carrier_services.json",
         "description": "Create a new CarrierService"
       },
       {
         "request": "PUT /admin/carrier_services/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/carrier_services/#{id}.json",
         "description": "Modify an existing CarrierService"
       },
       {
         "request": "GET /admin/carrier_services.json",
+        "method": "GET",
+        "endpoint": "/admin/carrier_services.json",
         "description": "Receive a list of all CarrierServices"
       },
       {
         "request": "GET /admin/carrier_services/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/carrier_services/#{id}.json",
         "description": "Receive a single CarrierService"
       },
       {
         "request": "DELETE /admin/carrier_services/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/carrier_services/#{id}.json",
         "description": "Remove a CarrierService from the database"
       }
     ]
@@ -143,10 +197,14 @@
     "list": [
       {
         "request": "GET /admin/checkouts/count.json",
+        "method": "GET",
+        "endpoint": "/admin/checkouts/count.json",
         "description": "Receive a count of all Checkouts"
       },
       {
         "request": "GET /admin/checkouts.json",
+        "method": "GET",
+        "endpoint": "/admin/checkouts.json",
         "description": "Receive a list of all Checkouts"
       }
     ]
@@ -157,22 +215,32 @@
     "list": [
       {
         "request": "POST /admin/collects.json",
+        "method": "POST",
+        "endpoint": "/admin/collects.json",
         "description": "Create a new Collect"
       },
       {
         "request": "DELETE /admin/collects/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/collects/#{id}.json",
         "description": "Remove a Collect from the database"
       },
       {
         "request": "GET /admin/collects.json",
+        "method": "GET",
+        "endpoint": "/admin/collects.json",
         "description": "Receive a list of all Collects"
       },
       {
         "request": "GET /admin/collects/count.json",
+        "method": "GET",
+        "endpoint": "/admin/collects/count.json",
         "description": "Receive a count of all Collects"
       },
       {
         "request": "GET /admin/collects/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/collects/#{id}.json",
         "description": "Receive a single Collect"
       }
     ]
@@ -183,42 +251,62 @@
     "list": [
       {
         "request": "GET /admin/comments.json?article_id=134645308&blog_id=241253187",
+        "method": "GET",
+        "endpoint": "/admin/comments.json",
         "description": "Receive a list of all Comments"
       },
       {
         "request": "GET /admin/comments/count.json?article_id=134645308&blog_id=241253187",
+        "method": "GET",
+        "endpoint": "/admin/comments/count.json",
         "description": "Receive a count of all Comments"
       },
       {
         "request": "GET /admin/comments/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/comments/#{id}.json",
         "description": "Receive a single Comment"
       },
       {
         "request": "POST /admin/comments.json",
+        "method": "POST",
+        "endpoint": "/admin/comments.json",
         "description": "Create a new Comment"
       },
       {
         "request": "PUT /admin/comments/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/comments/#{id}.json",
         "description": "Modify an existing Comment"
       },
       {
         "request": "POST /admin/comments/#{id}/spam.json",
+        "method": "POST",
+        "endpoint": "/admin/comments/#{id}/spam.json",
         "description": "Mark a Comment as spam"
       },
       {
         "request": "POST /admin/comments/#{id}/not_spam.json",
+        "method": "POST",
+        "endpoint": "/admin/comments/#{id}/not_spam.json",
         "description": "Mark a Comment as not spam"
       },
       {
         "request": "POST /admin/comments/#{id}/approve.json",
+        "method": "POST",
+        "endpoint": "/admin/comments/#{id}/approve.json",
         "description": "Approve a Comment"
       },
       {
         "request": "POST /admin/comments/#{id}/remove.json",
+        "method": "POST",
+        "endpoint": "/admin/comments/#{id}/remove.json",
         "description": "Remove a Comment"
       },
       {
         "request": "POST /admin/comments/#{id}/restore.json",
+        "method": "POST",
+        "endpoint": "/admin/comments/#{id}/restore.json",
         "description": "Restore a Comment"
       }
     ]
@@ -229,26 +317,38 @@
     "list": [
       {
         "request": "GET /admin/countries.json?since_id=359115488",
+        "method": "GET",
+        "endpoint": "/admin/countries.json",
         "description": "Receive a list of all Countries"
       },
       {
         "request": "GET /admin/countries/count.json",
+        "method": "GET",
+        "endpoint": "/admin/countries/count.json",
         "description": "Receive a count of all Countries"
       },
       {
         "request": "GET /admin/countries/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/countries/#{id}.json",
         "description": "Receive a single Country"
       },
       {
         "request": "POST /admin/countries.json",
+        "method": "POST",
+        "endpoint": "/admin/countries.json",
         "description": "Create a new Country"
       },
       {
         "request": "PUT /admin/countries/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/countries/#{id}.json",
         "description": "Modify an existing Country"
       },
       {
         "request": "DELETE /admin/countries/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/countries/#{id}.json",
         "description": "Remove a Country from the database"
       }
     ]
@@ -259,26 +359,38 @@
     "list": [
       {
         "request": "GET /admin/custom_collections.json?product_id=632910392",
+        "method": "GET",
+        "endpoint": "/admin/custom_collections.json",
         "description": "Receive a list of all CustomCollections"
       },
       {
         "request": "GET /admin/custom_collections/count.json",
+        "method": "GET",
+        "endpoint": "/admin/custom_collections/count.json",
         "description": "Receive a count of all CustomCollections"
       },
       {
         "request": "GET /admin/custom_collections/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/custom_collections/#{id}.json",
         "description": "Receive a single CustomCollection"
       },
       {
         "request": "POST /admin/custom_collections.json",
+        "method": "POST",
+        "endpoint": "/admin/custom_collections.json",
         "description": "Create a new CustomCollection"
       },
       {
         "request": "PUT /admin/custom_collections/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/custom_collections/#{id}.json",
         "description": "Modify an existing CustomCollection"
       },
       {
         "request": "DELETE /admin/custom_collections/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/custom_collections/#{id}.json",
         "description": "Remove a CustomCollection from the database"
       }
     ]
@@ -289,38 +401,56 @@
     "list": [
       {
         "request": "GET /admin/customers.json?since_id=207119551",
+        "method": "GET",
+        "endpoint": "/admin/customers.json",
         "description": "Receive a list of all Customers"
       },
       {
         "request": "GET /admin/customers/search.json?query=Bob country:United States",
+        "method": "GET",
+        "endpoint": "/admin/customers/search.json",
         "description": "Search for customers matching supplied query"
       },
       {
         "request": "GET /admin/customers/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/customers/#{id}.json",
         "description": "Receive a single Customer"
       },
       {
         "request": "POST /admin/customers.json",
+        "method": "POST",
+        "endpoint": "/admin/customers.json",
         "description": "Create a new Customer"
       },
       {
         "request": "PUT /admin/customers/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/customers/#{id}.json",
         "description": "Modify an existing Customer"
       },
       {
         "request": "POST /admin/customers/#{id}/account_activation_url.json",
+        "method": "POST",
+        "endpoint": "/admin/customers/#{id}/account_activation_url.json",
         "description": "Create account activation URL"
       },
       {
         "request": "DELETE /admin/customers/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/customers/#{id}.json",
         "description": "Remove a Customer from the database"
       },
       {
         "request": "GET /admin/customers/count.json",
+        "method": "GET",
+        "endpoint": "/admin/customers/count.json",
         "description": "Receive a count of all Customers"
       },
       {
         "request": "GET /admin/orders.json?customer_id=207119551",
+        "method": "GET",
+        "endpoint": "/admin/orders.json",
         "description": "Find orders belonging to this customer"
       }
     ]
@@ -331,30 +461,44 @@
     "list": [
       {
         "request": "GET /admin/customers/#{id}/addresses.json?limit=1&page=1",
+        "method": "GET",
+        "endpoint": "/admin/customers/#{id}/addresses.json",
         "description": "Receive a list of all CustomerAddresses"
       },
       {
         "request": "GET /admin/customers/#{id}/addresses/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/customers/#{id}/addresses/#{id}.json",
         "description": "Receive a single CustomerAddress"
       },
       {
         "request": "POST /admin/customers/#{id}/addresses.json",
+        "method": "POST",
+        "endpoint": "/admin/customers/#{id}/addresses.json",
         "description": "Create a new CustomerAddress"
       },
       {
         "request": "PUT /admin/customers/#{id}/addresses/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/customers/#{id}/addresses/#{id}.json",
         "description": "Modify an existing CustomerAddress"
       },
       {
         "request": "DELETE /admin/customers/#{id}/addresses/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/customers/#{id}/addresses/#{id}.json",
         "description": "Remove a CustomerAddress from the database"
       },
       {
         "request": "PUT /admin/customers/#{id}/addresses/set.json?address_ids[]=1053317300&operation=destroy",
+        "method": "PUT",
+        "endpoint": "/admin/customers/#{id}/addresses/set.json",
         "description": "Perform bulk operations against a number of addresses"
       },
       {
         "request": "PUT /admin/customers/#{id}/addresses/#{id}/default.json",
+        "method": "PUT",
+        "endpoint": "/admin/customers/#{id}/addresses/#{id}/default.json",
         "description": "Sets default address for a customer"
       }
     ]
@@ -365,30 +509,44 @@
     "list": [
       {
         "request": "GET /admin/customer_saved_searches.json",
+        "method": "GET",
+        "endpoint": "/admin/customer_saved_searches.json",
         "description": "Receive a list of all CustomerSavedSearches"
       },
       {
         "request": "GET /admin/customer_saved_searches/count.json",
+        "method": "GET",
+        "endpoint": "/admin/customer_saved_searches/count.json",
         "description": "Receive a count of all CustomerSavedSearches"
       },
       {
         "request": "GET /admin/customer_saved_searches/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/customer_saved_searches/#{id}.json",
         "description": "Receive a single CustomerSavedSearch"
       },
       {
         "request": "GET /admin/customer_saved_searches/#{id}/customers.json",
+        "method": "GET",
+        "endpoint": "/admin/customer_saved_searches/#{id}/customers.json",
         "description": "Receive all Customers resulting from a Customer Saved Search"
       },
       {
         "request": "POST /admin/customer_saved_searches.json",
+        "method": "POST",
+        "endpoint": "/admin/customer_saved_searches.json",
         "description": "Create a new CustomerSavedSearch"
       },
       {
         "request": "PUT /admin/customer_saved_searches/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/customer_saved_searches/#{id}.json",
         "description": "Modify an existing CustomerSavedSearch"
       },
       {
         "request": "DELETE /admin/customer_saved_searches/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/customer_saved_searches/#{id}.json",
         "description": "Remove a CustomerSavedSearch from the database"
       }
     ]
@@ -399,26 +557,38 @@
     "list": [
       {
         "request": "POST /admin/discounts.json",
+        "method": "POST",
+        "endpoint": "/admin/discounts.json",
         "description": "Create a new Discount"
       },
       {
         "request": "GET /admin/discounts.json",
+        "method": "GET",
+        "endpoint": "/admin/discounts.json",
         "description": "Receive a list of all Discounts"
       },
       {
         "request": "GET /admin/discounts/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/discounts/#{id}.json",
         "description": "Receive a single Discount"
       },
       {
         "request": "POST /admin/discounts/#{id}/disable.json",
+        "method": "POST",
+        "endpoint": "/admin/discounts/#{id}/disable.json",
         "description": "Disable a discount"
       },
       {
         "request": "POST /admin/discounts/#{id}/enable.json",
+        "method": "POST",
+        "endpoint": "/admin/discounts/#{id}/enable.json",
         "description": "Enable a discount"
       },
       {
         "request": "DELETE /admin/discounts/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/discounts/#{id}.json",
         "description": "Remove a Discount from the database"
       }
     ]
@@ -429,14 +599,20 @@
     "list": [
       {
         "request": "GET /admin/orders/#{id}/events.json?limit=1&page=2",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/events.json",
         "description": "Receive a list of all Events"
       },
       {
         "request": "GET /admin/events/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/events/#{id}.json",
         "description": "Receive a single Event"
       },
       {
         "request": "GET /admin/events/count.json?created_at_min=2008-01-10 08:00:00",
+        "method": "GET",
+        "endpoint": "/admin/events/count.json",
         "description": "Receive a count of all Events"
       }
     ]
@@ -447,30 +623,44 @@
     "list": [
       {
         "request": "GET /admin/orders/#{id}/fulfillments.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/fulfillments.json",
         "description": "Receive a list of all Fulfillments"
       },
       {
         "request": "GET /admin/orders/#{id}/fulfillments/count.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/fulfillments/count.json",
         "description": "Receive a count of all Fulfillments"
       },
       {
         "request": "GET /admin/orders/#{id}/fulfillments/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/fulfillments/#{id}.json",
         "description": "Receive a single Fulfillment"
       },
       {
         "request": "POST /admin/orders/#{id}/fulfillments.json",
+        "method": "POST",
+        "endpoint": "/admin/orders/#{id}/fulfillments.json",
         "description": "Create a new Fulfillment"
       },
       {
         "request": "PUT /admin/orders/#{id}/fulfillments/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/orders/#{id}/fulfillments/#{id}.json",
         "description": "Modify an existing Fulfillment"
       },
       {
         "request": "POST /admin/orders/#{id}/fulfillments/#{id}/complete.json",
+        "method": "POST",
+        "endpoint": "/admin/orders/#{id}/fulfillments/#{id}/complete.json",
         "description": "Complete a pending fulfillment"
       },
       {
         "request": "POST /admin/orders/#{id}/fulfillments/#{id}/cancel.json",
+        "method": "POST",
+        "endpoint": "/admin/orders/#{id}/fulfillments/#{id}/cancel.json",
         "description": "Cancel a pending fulfillment"
       }
     ]
@@ -481,22 +671,32 @@
     "list": [
       {
         "request": "GET /admin/orders/#{id}/fulfillments/#{id}/events.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/fulfillments/#{id}/events.json",
         "description": "Receive a list of all FulfillmentEvents"
       },
       {
         "request": "GET /admin/orders/#{id}/fulfillments/#{id}/events/3.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/fulfillments/#{id}/events/3.json",
         "description": "Receive a single FulfillmentEvent"
       },
       {
         "request": "POST /admin/orders/#{id}/fulfillments/#{id}/events.json",
+        "method": "POST",
+        "endpoint": "/admin/orders/#{id}/fulfillments/#{id}/events.json",
         "description": "Create a new FulfillmentEvent"
       },
       {
         "request": "PUT /admin/orders/#{id}/fulfillments/#{id}/events/5.json",
+        "method": "PUT",
+        "endpoint": "/admin/orders/#{id}/fulfillments/#{id}/events/5.json",
         "description": "Modify an existing FulfillmentEvent"
       },
       {
         "request": "DELETE /admin/orders/#{id}/fulfillments/#{id}/events/2.json",
+        "method": "DELETE",
+        "endpoint": "/admin/orders/#{id}/fulfillments/#{id}/events/2.json",
         "description": "Remove a FulfillmentEvent from the database"
       }
     ]
@@ -507,22 +707,32 @@
     "list": [
       {
         "request": "GET /admin/fulfillment_services.json",
+        "method": "GET",
+        "endpoint": "/admin/fulfillment_services.json",
         "description": "Receive a list of all FulfillmentServices"
       },
       {
         "request": "POST /admin/fulfillment_services.json",
+        "method": "POST",
+        "endpoint": "/admin/fulfillment_services.json",
         "description": "Create a new FulfillmentService"
       },
       {
         "request": "GET /admin/fulfillment_services/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/fulfillment_services/#{id}.json",
         "description": "Receive a single FulfillmentService"
       },
       {
         "request": "PUT /admin/fulfillment_services/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/fulfillment_services/#{id}.json",
         "description": "Modify an existing FulfillmentService"
       },
       {
         "request": "DELETE /admin/fulfillment_services/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/fulfillment_services/#{id}.json",
         "description": "Remove a FulfillmentService from the database"
       }
     ]
@@ -533,30 +743,44 @@
     "list": [
       {
         "request": "GET /admin/gift_cards.json?status=enabled",
+        "method": "GET",
+        "endpoint": "/admin/gift_cards.json",
         "description": "Receive a list of all Gift Cards"
       },
       {
         "request": "GET /admin/gift_cards/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/gift_cards/#{id}.json",
         "description": "Receive a single Gift Card"
       },
       {
         "request": "GET /admin/gift_cards/count.json",
+        "method": "GET",
+        "endpoint": "/admin/gift_cards/count.json",
         "description": "Receive a count of all Gift Cards"
       },
       {
         "request": "POST /admin/gift_cards.json",
+        "method": "POST",
+        "endpoint": "/admin/gift_cards.json",
         "description": "Create a new Gift Card"
       },
       {
         "request": "PUT /admin/gift_cards/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/gift_cards/#{id}.json",
         "description": "Modify an existing Gift Card"
       },
       {
         "request": "POST /admin/gift_cards/#{id}/disable.json",
+        "method": "POST",
+        "endpoint": "/admin/gift_cards/#{id}/disable.json",
         "description": "Disabling a gift card is permanent and cannot be undone."
       },
       {
         "request": "GET /admin/gift_cards/search.json?query=Bob",
+        "method": "GET",
+        "endpoint": "/admin/gift_cards/search.json",
         "description": "Search for gift cards matching supplied query"
       }
     ]
@@ -567,10 +791,14 @@
     "list": [
       {
         "request": "GET /admin/locations.json",
+        "method": "GET",
+        "endpoint": "/admin/locations.json",
         "description": "Receive a list of all Locations"
       },
       {
         "request": "GET /admin/locations/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/locations/#{id}.json",
         "description": "Receive a single Location"
       }
     ]
@@ -581,54 +809,80 @@
     "list": [
       {
         "request": "GET /admin/metafields.json",
+        "method": "GET",
+        "endpoint": "/admin/metafields.json",
         "description": "Get metafields that belong to a store"
       },
       {
         "request": "GET /admin/products/#{id}/metafields.json",
+        "method": "GET",
+        "endpoint": "/admin/products/#{id}/metafields.json",
         "description": "Get metafields that belong to a product"
       },
       {
         "request": "GET /admin/metafields.json?metafield[owner_id]=850703190&metafield[owner_resource]=product_image",
+        "method": "GET",
+        "endpoint": "/admin/metafields.json",
         "description": "Get metafields that belong to a product image"
       },
       {
         "request": "GET /admin/metafields/count.json",
+        "method": "GET",
+        "endpoint": "/admin/metafields/count.json",
         "description": "Get a count of metafields that belong to a store"
       },
       {
         "request": "GET /admin/products/#{id}/metafields/count.json",
+        "method": "GET",
+        "endpoint": "/admin/products/#{id}/metafields/count.json",
         "description": "Get a count of metafields that belong to a product"
       },
       {
         "request": "GET /admin/metafields/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/metafields/#{id}.json",
         "description": "Get a single store metafield by its ID"
       },
       {
         "request": "GET /admin/products/#{id}/metafields/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/products/#{id}/metafields/#{id}.json",
         "description": "Get a single product metafield by its ID"
       },
       {
         "request": "POST /admin/metafields.json",
+        "method": "POST",
+        "endpoint": "/admin/metafields.json",
         "description": "Create a new metafield for a store"
       },
       {
         "request": "POST /admin/products/#{id}/metafields.json",
+        "method": "POST",
+        "endpoint": "/admin/products/#{id}/metafields.json",
         "description": "Create a new metafield for a product"
       },
       {
         "request": "PUT /admin/metafields/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/metafields/#{id}.json",
         "description": "Update a store metafield"
       },
       {
         "request": "PUT /admin/products/#{id}/metafields/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/products/#{id}/metafields/#{id}.json",
         "description": "Update a product metafield"
       },
       {
         "request": "DELETE /admin/metafields/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/metafields/#{id}.json",
         "description": "Delete a store metafield"
       },
       {
         "request": "DELETE /admin/products/#{id}/metafields/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/products/#{id}/metafields/#{id}.json",
         "description": "Delete a product metafield"
       }
     ]
@@ -639,38 +893,56 @@
     "list": [
       {
         "request": "GET /admin/orders.json?fields=created_at,id,name,total-price",
+        "method": "GET",
+        "endpoint": "/admin/orders.json",
         "description": "Retrieve a list of Orders (OPEN Orders by default, use status=any for ALL orders)"
       },
       {
         "request": "GET /admin/orders/#{id}.json?fields=id,line_items,name,total_price",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}.json",
         "description": "Receive a single Order"
       },
       {
         "request": "GET /admin/orders/count.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/count.json",
         "description": "Receive a count of all Orders"
       },
       {
         "request": "POST /admin/orders/#{id}/close.json",
+        "method": "POST",
+        "endpoint": "/admin/orders/#{id}/close.json",
         "description": "Close an Order"
       },
       {
         "request": "POST /admin/orders/#{id}/open.json",
+        "method": "POST",
+        "endpoint": "/admin/orders/#{id}/open.json",
         "description": "Re-open a closed Order"
       },
       {
         "request": "POST /admin/orders/#{id}/cancel.json",
+        "method": "POST",
+        "endpoint": "/admin/orders/#{id}/cancel.json",
         "description": "Cancel an Order"
       },
       {
         "request": "POST /admin/orders.json",
+        "method": "POST",
+        "endpoint": "/admin/orders.json",
         "description": "Create a new Order"
       },
       {
         "request": "PUT /admin/orders/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/orders/#{id}.json",
         "description": "Modify an existing Order"
       },
       {
         "request": "DELETE /admin/orders/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/orders/#{id}.json",
         "description": "Remove a Order from the database"
       }
     ]
@@ -681,22 +953,32 @@
     "list": [
       {
         "request": "POST /admin/orders/#{id}/risks.json",
+        "method": "POST",
+        "endpoint": "/admin/orders/#{id}/risks.json",
         "description": "Create a new Order Risks"
       },
       {
         "request": "GET /admin/orders/#{id}/risks.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/risks.json",
         "description": "Receive a list of all Order Risks"
       },
       {
         "request": "GET /admin/orders/#{id}/risks/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/risks/#{id}.json",
         "description": "Receive a single Order Risks"
       },
       {
         "request": "PUT /admin/orders/#{id}/risks/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/orders/#{id}/risks/#{id}.json",
         "description": "Modify an existing Order Risks"
       },
       {
         "request": "DELETE /admin/orders/#{id}/risks/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/orders/#{id}/risks/#{id}.json",
         "description": "Remove a Order Risks from the database"
       }
     ]
@@ -707,26 +989,38 @@
     "list": [
       {
         "request": "GET /admin/pages.json",
+        "method": "GET",
+        "endpoint": "/admin/pages.json",
         "description": "Receive a list of all Pages"
       },
       {
         "request": "GET /admin/pages/count.json",
+        "method": "GET",
+        "endpoint": "/admin/pages/count.json",
         "description": "Receive a count of all Pages"
       },
       {
         "request": "GET /admin/pages/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/pages/#{id}.json",
         "description": "Receive a single Page"
       },
       {
         "request": "POST /admin/pages.json",
+        "method": "POST",
+        "endpoint": "/admin/pages.json",
         "description": "Create a new Page"
       },
       {
         "request": "PUT /admin/pages/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/pages/#{id}.json",
         "description": "Modify an existing Page"
       },
       {
         "request": "DELETE /admin/pages/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/pages/#{id}.json",
         "description": "Remove a Page from the database"
       }
     ]
@@ -737,6 +1031,8 @@
     "list": [
       {
         "request": "GET /admin/policies.json",
+        "method": "GET",
+        "endpoint": "/admin/policies.json",
         "description": "Receive a list of all Policies"
       }
     ]
@@ -747,26 +1043,38 @@
     "list": [
       {
         "request": "GET /admin/products.json",
+        "method": "GET",
+        "endpoint": "/admin/products.json",
         "description": "Receive a list of all Products"
       },
       {
         "request": "GET /admin/products/count.json",
+        "method": "GET",
+        "endpoint": "/admin/products/count.json",
         "description": "Receive a count of all Products"
       },
       {
         "request": "GET /admin/products/#{id}.json?fields=id,images,title",
+        "method": "GET",
+        "endpoint": "/admin/products/#{id}.json",
         "description": "Receive a single Product"
       },
       {
         "request": "POST /admin/products.json",
+        "method": "POST",
+        "endpoint": "/admin/products.json",
         "description": "Create a new Product"
       },
       {
         "request": "PUT /admin/products/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/products/#{id}.json",
         "description": "Modify an existing Product"
       },
       {
         "request": "DELETE /admin/products/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/products/#{id}.json",
         "description": "Remove a Product from the database"
       }
     ]
@@ -777,26 +1085,38 @@
     "list": [
       {
         "request": "GET /admin/products/#{id}/images.json?since_id=850703190",
+        "method": "GET",
+        "endpoint": "/admin/products/#{id}/images.json",
         "description": "Receive a list of all Product Images"
       },
       {
         "request": "GET /admin/products/#{id}/images/count.json",
+        "method": "GET",
+        "endpoint": "/admin/products/#{id}/images/count.json",
         "description": "Receive a count of all Product Images"
       },
       {
         "request": "GET /admin/products/#{id}/images/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/products/#{id}/images/#{id}.json",
         "description": "Receive a single Product Image"
       },
       {
         "request": "POST /admin/products/#{id}/images.json",
+        "method": "POST",
+        "endpoint": "/admin/products/#{id}/images.json",
         "description": "Create a new Product Image"
       },
       {
         "request": "PUT /admin/products/#{id}/images/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/products/#{id}/images/#{id}.json",
         "description": "Modify an existing Product Image"
       },
       {
         "request": "DELETE /admin/products/#{id}/images/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/products/#{id}/images/#{id}.json",
         "description": "Remove a Product Image from the database"
       }
     ]
@@ -807,26 +1127,38 @@
     "list": [
       {
         "request": "GET /admin/products/#{id}/variants.json",
+        "method": "GET",
+        "endpoint": "/admin/products/#{id}/variants.json",
         "description": "Receive a list of all Product Variants"
       },
       {
         "request": "GET /admin/products/#{id}/variants/count.json",
+        "method": "GET",
+        "endpoint": "/admin/products/#{id}/variants/count.json",
         "description": "Receive a count of all Product Variants"
       },
       {
         "request": "GET /admin/variants/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/variants/#{id}.json",
         "description": "Receive a single Product Variant"
       },
       {
         "request": "POST /admin/products/#{id}/variants.json",
+        "method": "POST",
+        "endpoint": "/admin/products/#{id}/variants.json",
         "description": "Create a new Product Variant"
       },
       {
         "request": "PUT /admin/variants/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/variants/#{id}.json",
         "description": "Modify an existing Product Variant"
       },
       {
         "request": "DELETE /admin/products/#{id}/variants/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/products/#{id}/variants/#{id}.json",
         "description": "Remove a Product Variant from the database"
       }
     ]
@@ -837,18 +1169,26 @@
     "list": [
       {
         "request": "GET /admin/countries/#{id}/provinces.json",
+        "method": "GET",
+        "endpoint": "/admin/countries/#{id}/provinces.json",
         "description": "Receive a list of all Provinces"
       },
       {
         "request": "GET /admin/countries/#{id}/provinces/count.json?since_id=536137098",
+        "method": "GET",
+        "endpoint": "/admin/countries/#{id}/provinces/count.json",
         "description": "Receive a count of all Provinces"
       },
       {
         "request": "GET /admin/countries/#{id}/provinces/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/countries/#{id}/provinces/#{id}.json",
         "description": "Receive a single Province"
       },
       {
         "request": "PUT /admin/countries/#{id}/provinces/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/countries/#{id}/provinces/#{id}.json",
         "description": "Modify an existing Province"
       }
     ]
@@ -859,22 +1199,32 @@
     "list": [
       {
         "request": "POST /admin/recurring_application_charges.json",
+        "method": "POST",
+        "endpoint": "/admin/recurring_application_charges.json",
         "description": "Create a recurring application charge"
       },
       {
         "request": "GET /admin/recurring_application_charges/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/recurring_application_charges/#{id}.json",
         "description": "Receive a single RecurringApplicationCharge"
       },
       {
         "request": "GET /admin/recurring_application_charges.json?since_id=455696195",
+        "method": "GET",
+        "endpoint": "/admin/recurring_application_charges.json",
         "description": "Retrieve all recurring application charges"
       },
       {
         "request": "POST /admin/recurring_application_charges/#{id}/activate.json",
+        "method": "POST",
+        "endpoint": "/admin/recurring_application_charges/#{id}/activate.json",
         "description": "Activate a recurring application charge"
       },
       {
         "request": "DELETE /admin/recurring_application_charges/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/recurring_application_charges/#{id}.json",
         "description": "Cancel a recurring application charge"
       }
     ]
@@ -885,26 +1235,38 @@
     "list": [
       {
         "request": "GET /admin/redirects.json",
+        "method": "GET",
+        "endpoint": "/admin/redirects.json",
         "description": "Receive a list of all Redirects"
       },
       {
         "request": "GET /admin/redirects/count.json",
+        "method": "GET",
+        "endpoint": "/admin/redirects/count.json",
         "description": "Receive a count of all Redirects"
       },
       {
         "request": "GET /admin/redirects/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/redirects/#{id}.json",
         "description": "Receive a single Redirect"
       },
       {
         "request": "POST /admin/redirects.json",
+        "method": "POST",
+        "endpoint": "/admin/redirects.json",
         "description": "Create a new Redirect"
       },
       {
         "request": "PUT /admin/redirects/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/redirects/#{id}.json",
         "description": "Modify an existing Redirect"
       },
       {
         "request": "DELETE /admin/redirects/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/redirects/#{id}.json",
         "description": "Remove a Redirect from the database"
       }
     ]
@@ -915,6 +1277,8 @@
     "list": [
       {
         "request": "GET /admin/orders/#{id}/refunds/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/refunds/#{id}.json",
         "description": "Receive a single Refund"
       }
     ]
@@ -925,6 +1289,8 @@
     "list": [
       {
         "request": "GET /admin/shipping_zones.json",
+        "method": "GET",
+        "endpoint": "/admin/shipping_zones.json",
         "description": "Receive a list of all Shipping Zones"
       }
     ]
@@ -935,6 +1301,8 @@
     "list": [
       {
         "request": "GET /admin/shop.json",
+        "method": "GET",
+        "endpoint": "/admin/shop.json",
         "description": "Receive a single Shop"
       }
     ]
@@ -945,30 +1313,44 @@
     "list": [
       {
         "request": "GET /admin/smart_collections.json?since_id=482865238",
+        "method": "GET",
+        "endpoint": "/admin/smart_collections.json",
         "description": "Receive a list of all SmartCollections"
       },
       {
         "request": "GET /admin/smart_collections/count.json?product_id=632910392",
+        "method": "GET",
+        "endpoint": "/admin/smart_collections/count.json",
         "description": "Receive a count of all SmartCollections"
       },
       {
         "request": "GET /admin/smart_collections/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/smart_collections/#{id}.json",
         "description": "Receive a single SmartCollection"
       },
       {
         "request": "POST /admin/smart_collections.json",
+        "method": "POST",
+        "endpoint": "/admin/smart_collections.json",
         "description": "Create a new SmartCollection"
       },
       {
         "request": "PUT /admin/smart_collections/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/smart_collections/#{id}.json",
         "description": "Modify an existing SmartCollection"
       },
       {
         "request": "PUT /admin/smart_collections/#{id}/order.json?sort_order=alpha-desc",
+        "method": "PUT",
+        "endpoint": "/admin/smart_collections/#{id}/order.json",
         "description": "Set the ordering type and/or the manual order of products in a smart collection"
       },
       {
         "request": "DELETE /admin/smart_collections/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/smart_collections/#{id}.json",
         "description": "Remove a SmartCollection from the database"
       }
     ]
@@ -979,22 +1361,32 @@
     "list": [
       {
         "request": "GET /admin/themes.json",
+        "method": "GET",
+        "endpoint": "/admin/themes.json",
         "description": "Receive a list of all Themes"
       },
       {
         "request": "GET /admin/themes/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/themes/#{id}.json",
         "description": "Receive a single Theme"
       },
       {
         "request": "POST /admin/themes.json",
+        "method": "POST",
+        "endpoint": "/admin/themes.json",
         "description": "Create a new Theme"
       },
       {
         "request": "PUT /admin/themes/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/themes/#{id}.json",
         "description": "Modify an existing Theme"
       },
       {
         "request": "DELETE /admin/themes/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/themes/#{id}.json",
         "description": "Remove a Theme from the database"
       }
     ]
@@ -1005,18 +1397,26 @@
     "list": [
       {
         "request": "GET /admin/orders/#{id}/transactions.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/transactions.json",
         "description": "Receive a list of all Transactions"
       },
       {
         "request": "GET /admin/orders/#{id}/transactions/count.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/transactions/count.json",
         "description": "Receive a count of all Transactions"
       },
       {
         "request": "GET /admin/orders/#{id}/transactions/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/orders/#{id}/transactions/#{id}.json",
         "description": "Receive a single Transaction"
       },
       {
         "request": "POST /admin/orders/#{id}/transactions.json",
+        "method": "POST",
+        "endpoint": "/admin/orders/#{id}/transactions.json",
         "description": "Create a new Transaction"
       }
     ]
@@ -1027,10 +1427,14 @@
     "list": [
       {
         "request": "GET /admin/users.json",
+        "method": "GET",
+        "endpoint": "/admin/users.json",
         "description": "Receive a list of all Users"
       },
       {
         "request": "GET /admin/users/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/users/#{id}.json",
         "description": "Receive a single User"
       }
     ]
@@ -1041,26 +1445,38 @@
     "list": [
       {
         "request": "GET /admin/webhooks.json",
+        "method": "GET",
+        "endpoint": "/admin/webhooks.json",
         "description": "Receive a list of all Webhooks"
       },
       {
         "request": "GET /admin/webhooks/count.json?topic=orders/create",
+        "method": "GET",
+        "endpoint": "/admin/webhooks/count.json",
         "description": "Receive a count of all Webhooks"
       },
       {
         "request": "GET /admin/webhooks/#{id}.json",
+        "method": "GET",
+        "endpoint": "/admin/webhooks/#{id}.json",
         "description": "Receive a single Webhook"
       },
       {
         "request": "POST /admin/webhooks.json",
+        "method": "POST",
+        "endpoint": "/admin/webhooks.json",
         "description": "Create a new Webhook"
       },
       {
         "request": "PUT /admin/webhooks/#{id}.json",
+        "method": "PUT",
+        "endpoint": "/admin/webhooks/#{id}.json",
         "description": "Modify an existing Webhook"
       },
       {
         "request": "DELETE /admin/webhooks/#{id}.json",
+        "method": "DELETE",
+        "endpoint": "/admin/webhooks/#{id}.json",
         "description": "Remove a Webhook from the database"
       }
     ]

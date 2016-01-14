@@ -1,3 +1,4 @@
+var url = require("url")
 var Promise = require("bluebird")
 var cheerio = require("cheerio")
 var request = require("request-promise")
@@ -17,8 +18,15 @@ request("https://docs.shopify.com/api")
           var $ = cheerio.load(html)
           endpoint.list = $(".api-endpointlist li")
             .map(function(i, el) {
+              var full = $(this).find(".api-endpointlist-request-type").text()
+              var methodEndpointSplit = full.split(' ')
+              var method = methodEndpointSplit[0]
+              var endpoint = methodEndpointSplit[1].replace(/\#\{id\}/g, 'id')
+              endpoint = url.parse(endpoint)
               return {
-                request: $(this).find(".api-endpointlist-request-type").text(),
+                request: full,
+                method: method,
+                endpoint: endpoint.pathname.replace(/id/g, '#{id}'),
                 description: $(this).find(".api-endpointlist-description").text()
               };
             }).get()
