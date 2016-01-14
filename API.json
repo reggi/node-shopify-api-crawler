@@ -12,7 +12,7 @@
         "description": "Receive a single ApplicationCharge"
       },
       {
-        "request": "GET /admin/application_charges.json",
+        "request": "GET /admin/application_charges.json?since_id=556467234",
         "description": "Retrieve all one-time application charges"
       },
       {
@@ -50,7 +50,7 @@
         "description": "Get a list of all the authors"
       },
       {
-        "request": "GET /admin/articles/tags.json",
+        "request": "GET /admin/blogs/#{id}/articles/tags.json",
         "description": "Get a list of all the tags"
       },
       {
@@ -228,7 +228,7 @@
     "text": "Country",
     "list": [
       {
-        "request": "GET /admin/countries.json",
+        "request": "GET /admin/countries.json?since_id=359115488",
         "description": "Receive a list of all Countries"
       },
       {
@@ -258,7 +258,7 @@
     "text": "CustomCollection",
     "list": [
       {
-        "request": "GET /admin/custom_collections.json",
+        "request": "GET /admin/custom_collections.json?product_id=632910392",
         "description": "Receive a list of all CustomCollections"
       },
       {
@@ -288,7 +288,7 @@
     "text": "Customer",
     "list": [
       {
-        "request": "GET /admin/customers.json",
+        "request": "GET /admin/customers.json?since_id=207119551",
         "description": "Receive a list of all Customers"
       },
       {
@@ -306,6 +306,10 @@
       {
         "request": "PUT /admin/customers/#{id}.json",
         "description": "Modify an existing Customer"
+      },
+      {
+        "request": "POST /admin/customers/#{id}/account_activation_url.json",
+        "description": "Create account activation URL"
       },
       {
         "request": "DELETE /admin/customers/#{id}.json",
@@ -326,7 +330,7 @@
     "text": "CustomerAddress",
     "list": [
       {
-        "request": "GET /admin/customers/#{id}/addresses.json",
+        "request": "GET /admin/customers/#{id}/addresses.json?limit=1&page=1",
         "description": "Receive a list of all CustomerAddresses"
       },
       {
@@ -346,7 +350,7 @@
         "description": "Remove a CustomerAddress from the database"
       },
       {
-        "request": "PUT /admin/customers/#{id}/addresses/set.json?address_ids[]=1053317289&operation=destroy",
+        "request": "PUT /admin/customers/#{id}/addresses/set.json?address_ids[]=1053317300&operation=destroy",
         "description": "Perform bulk operations against a number of addresses"
       },
       {
@@ -390,11 +394,41 @@
     ]
   },
   {
+    "href": "/api/discount/",
+    "text": "Discountplus",
+    "list": [
+      {
+        "request": "POST /admin/discounts.json",
+        "description": "Create a new Discount"
+      },
+      {
+        "request": "GET /admin/discounts.json",
+        "description": "Receive a list of all Discounts"
+      },
+      {
+        "request": "GET /admin/discounts/#{id}.json",
+        "description": "Receive a single Discount"
+      },
+      {
+        "request": "POST /admin/discounts/#{id}/disable.json",
+        "description": "Disable a discount"
+      },
+      {
+        "request": "POST /admin/discounts/#{id}/enable.json",
+        "description": "Enable a discount"
+      },
+      {
+        "request": "DELETE /admin/discounts/#{id}.json",
+        "description": "Remove a Discount from the database"
+      }
+    ]
+  },
+  {
     "href": "/api/event/",
     "text": "Event",
     "list": [
       {
-        "request": "GET /admin/events.json",
+        "request": "GET /admin/orders/#{id}/events.json?limit=1&page=2",
         "description": "Receive a list of all Events"
       },
       {
@@ -402,7 +436,7 @@
         "description": "Receive a single Event"
       },
       {
-        "request": "GET /admin/events/count.json",
+        "request": "GET /admin/events/count.json?created_at_min=2008-01-10 08:00:00",
         "description": "Receive a count of all Events"
       }
     ]
@@ -442,6 +476,32 @@
     ]
   },
   {
+    "href": "/api/fulfillmentevent/",
+    "text": "FulfillmentEvent",
+    "list": [
+      {
+        "request": "GET /admin/orders/#{id}/fulfillments/#{id}/events.json",
+        "description": "Receive a list of all FulfillmentEvents"
+      },
+      {
+        "request": "GET /admin/orders/#{id}/fulfillments/#{id}/events/3.json",
+        "description": "Receive a single FulfillmentEvent"
+      },
+      {
+        "request": "POST /admin/orders/#{id}/fulfillments/#{id}/events.json",
+        "description": "Create a new FulfillmentEvent"
+      },
+      {
+        "request": "PUT /admin/orders/#{id}/fulfillments/#{id}/events/5.json",
+        "description": "Modify an existing FulfillmentEvent"
+      },
+      {
+        "request": "DELETE /admin/orders/#{id}/fulfillments/#{id}/events/2.json",
+        "description": "Remove a FulfillmentEvent from the database"
+      }
+    ]
+  },
+  {
     "href": "/api/fulfillmentservice/",
     "text": "FulfillmentService",
     "list": [
@@ -464,6 +524,40 @@
       {
         "request": "DELETE /admin/fulfillment_services/#{id}.json",
         "description": "Remove a FulfillmentService from the database"
+      }
+    ]
+  },
+  {
+    "href": "/api/gift_card/",
+    "text": "Gift Cardplus",
+    "list": [
+      {
+        "request": "GET /admin/gift_cards.json?status=enabled",
+        "description": "Receive a list of all Gift Cards"
+      },
+      {
+        "request": "GET /admin/gift_cards/#{id}.json",
+        "description": "Receive a single Gift Card"
+      },
+      {
+        "request": "GET /admin/gift_cards/count.json",
+        "description": "Receive a count of all Gift Cards"
+      },
+      {
+        "request": "POST /admin/gift_cards.json",
+        "description": "Create a new Gift Card"
+      },
+      {
+        "request": "PUT /admin/gift_cards/#{id}.json",
+        "description": "Modify an existing Gift Card"
+      },
+      {
+        "request": "POST /admin/gift_cards/#{id}/disable.json",
+        "description": "Disabling a gift card is permanent and cannot be undone."
+      },
+      {
+        "request": "GET /admin/gift_cards/search.json?query=Bob",
+        "description": "Search for gift cards matching supplied query"
       }
     ]
   },
@@ -544,11 +638,11 @@
     "text": "Order",
     "list": [
       {
-        "request": "GET /admin/orders.json",
+        "request": "GET /admin/orders.json?fields=created_at,id,name,total-price",
         "description": "Retrieve a list of Orders (OPEN Orders by default, use status=any for ALL orders)"
       },
       {
-        "request": "GET /admin/orders/#{id}.json",
+        "request": "GET /admin/orders/#{id}.json?fields=id,line_items,name,total_price",
         "description": "Receive a single Order"
       },
       {
@@ -660,7 +754,7 @@
         "description": "Receive a count of all Products"
       },
       {
-        "request": "GET /admin/products/#{id}.json",
+        "request": "GET /admin/products/#{id}.json?fields=id,images,title",
         "description": "Receive a single Product"
       },
       {
@@ -682,7 +776,7 @@
     "text": "Product Image",
     "list": [
       {
-        "request": "GET /admin/products/#{id}/images.json",
+        "request": "GET /admin/products/#{id}/images.json?since_id=850703190",
         "description": "Receive a list of all Product Images"
       },
       {
@@ -746,7 +840,7 @@
         "description": "Receive a list of all Provinces"
       },
       {
-        "request": "GET /admin/countries/#{id}/provinces/count.json",
+        "request": "GET /admin/countries/#{id}/provinces/count.json?since_id=536137098",
         "description": "Receive a count of all Provinces"
       },
       {
@@ -772,7 +866,7 @@
         "description": "Receive a single RecurringApplicationCharge"
       },
       {
-        "request": "GET /admin/recurring_application_charges.json",
+        "request": "GET /admin/recurring_application_charges.json?since_id=455696195",
         "description": "Retrieve all recurring application charges"
       },
       {
@@ -826,6 +920,16 @@
     ]
   },
   {
+    "href": "/api/shipping_zone/",
+    "text": "Shipping Zone",
+    "list": [
+      {
+        "request": "GET /admin/shipping_zones.json",
+        "description": "Receive a list of all Shipping Zones"
+      }
+    ]
+  },
+  {
     "href": "/api/shop/",
     "text": "Shop",
     "list": [
@@ -840,11 +944,11 @@
     "text": "SmartCollection",
     "list": [
       {
-        "request": "GET /admin/smart_collections.json",
+        "request": "GET /admin/smart_collections.json?since_id=482865238",
         "description": "Receive a list of all SmartCollections"
       },
       {
-        "request": "GET /admin/smart_collections/count.json",
+        "request": "GET /admin/smart_collections/count.json?product_id=632910392",
         "description": "Receive a count of all SmartCollections"
       },
       {
@@ -860,7 +964,7 @@
         "description": "Modify an existing SmartCollection"
       },
       {
-        "request": "PUT /admin/smart_collections/#{id}/order.json?products[]=921728736&products[]=632910392",
+        "request": "PUT /admin/smart_collections/#{id}/order.json?sort_order=alpha-desc",
         "description": "Set the ordering type and/or the manual order of products in a smart collection"
       },
       {
@@ -940,7 +1044,7 @@
         "description": "Receive a list of all Webhooks"
       },
       {
-        "request": "GET /admin/webhooks/count.json",
+        "request": "GET /admin/webhooks/count.json?topic=orders/create",
         "description": "Receive a count of all Webhooks"
       },
       {
